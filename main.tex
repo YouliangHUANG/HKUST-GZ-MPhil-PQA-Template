@@ -1,0 +1,225 @@
+%% main.tex
+%% Copyright 2023 You-Liang HUANG and Zhijun MA
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License, either version 1.3
+% of this license or (at your option) any later version.
+% The latest version of this license is in
+%   https://www.latex-project.org/lppl.txt
+% and version 1.3c or later is part of all distributions of LaTeX
+% version 2008 or later.
+%
+% This work has the LPPL maintenance status `maintained'.
+% 
+% The Current Maintainers of this work are You-Liang HUANG and Zhijun MA from the 2nd cohort Redbird MPhil students at HKUST-GZ.
+%
+% This work consists of the files main.tex and cover.tex
+%
+% Intro: This is a home-made latex template for Thesis Proposal for MPhil Degree at HKUST-GZ.
+
+\documentclass[12pt]{article}
+\renewcommand{\tiny}{\normalsize}
+\renewcommand{\footnotesize}{\normalsize}
+\renewcommand{\small}{\normalsize}
+\renewcommand{\large}{\normalsize}
+\renewcommand{\Large}{\normalsize}
+\renewcommand{\LARGE}{\normalsize}
+\renewcommand{\huge}{\normalsize}
+\renewcommand{\Huge}{\normalsize}
+
+\usepackage{times}
+\usepackage[normalem]{ulem}
+\useunder{\uline}{\ul}{}
+\usepackage{ulem}
+\usepackage{mathptmx}
+\usepackage{setspace}
+\usepackage[raggedright]{titlesec}
+\usepackage{geometry}
+\usepackage{changepage}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+
+\titleformat{\section}{\normalsize\bfseries}{\arabic{section}}{0.5em}{}[]
+\titleformat{\subsection}{\normalsize\bfseries}{\arabic{section}.\arabic{subsection}}{0.5em}{}[]
+\titleformat{\subsubsection}{\normalsize\bfseries}{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}}{0.5em}{}[]
+
+\titlespacing*{\section}{1em}{0em}{0em}
+\titlespacing*{\subsection}{2.5em}{0em}{0em}
+\titlespacing*{\subsubsection}{4em}{0em}{0em}
+
+\newenvironment{subs}{\adjustwidth{3em}{0pt}}{\endadjustwidth}
+\newenvironment{subsubs}{\adjustwidth{4em}{0pt}}{\endadjustwidth}
+
+% set one-and-half spacing
+\setstretch{1.5}
+
+% set the page format
+\geometry{a4paper, top=25mm, bottom=25mm, left=25mm, right=25mm}
+
+% comply with the official template
+\usepackage{etoolbox}% http://ctan.org/pkg/etoolbox
+\makeatletter
+\def\@part[#1]#2{%
+    \ifnum \c@secnumdepth >\m@ne
+      \refstepcounter{part}%
+      \addcontentsline{toc}{part}{\thepart\hspace{1em}#1}%
+    \else
+      \addcontentsline{toc}{part}{#1}%
+    \fi
+    {\parindent \z@ \raggedright
+     \interlinepenalty \@M
+     \normalfont
+     \ifnum \c@secnumdepth >\m@ne
+       \normalsize\bfseries\partname\nobreakspace\thepart
+       \hspace{0.5em}\nobreak
+     \fi
+     \normalsize \bfseries #2%
+     \markboth{}{}\par}%
+    \nobreak
+    \vskip 1ex
+    \@afterheading}
+\patchcmd{\@part}{\par}{\quad}{}{}
+\makeatother
+
+\newcommand{\thesistitle}{\textbf{Thesis Proposal for MPhil Degree}}
+% Personal Info % Only Edit Content %
+\newcommand{\thesisauthor}{Your Name}
+\newcommand{\SID}{Your student id}
+\newcommand{\groupproject}{\uline{This is my ultimate super extra very long distinguished outstanding awesome extremely good group project title}}
+\newcommand{\projectmanager}{Your Project Manager}
+\newcommand{\projectsupervisor}{Your Project Supervisor}
+\newcommand{\individualproject}{\uline{This is my ultimate super extra very long distinguished outstanding awesome extremely good individual project title}}
+\newcommand{\thesissupervisor}{Your Academic Supervisor}
+\newcommand{\thrust}{Your Thrust and Hub}
+\newcommand{\thesisdate}{01/2024}
+
+\begin{document}
+
+\include{cover}
+
+\newpage
+\tableofcontents
+\pagenumbering{roman}
+\setcounter{page}{2}
+\newpage
+
+\setcounter{page}{1}
+\pagenumbering{arabic}
+
+\part{Introduction to the Group Project}
+\setcounter{section}{1}
+\subsection{Background and Objective}
+\begin{subs}
+Briefly describe the group project.
+\end{subs}
+
+\subsection{Significance}
+\begin{subs}
+Explain why this group project is essential in the real-world context.
+\end{subs}
+
+\subsection{Project Composition}
+\begin{subs}
+Provide information of the individual projects that collectively comprise the group project, including titles/researcher names of each individual project.
+\end{subs}
+
+\subsection{Project Connections}
+\begin{subs}
+Outline the connections between the group project and the individual projects.
+\end{subs}
+
+\subsection{Project Milestones}
+\begin{subs}
+List the key milestones at different stages of the group project implementation.
+\end{subs}
+
+\part{Proposal of the Individual Project}
+\setcounter{section}{2}
+\setcounter{subsection}{0}
+\subsection{Significance and Relevance of the Individual Project to the Group Project}
+\subsubsection{Complementary Role}
+\begin{subsubs}
+
+Explain how your project complements the broader objectives of the group project. Discuss how your work fills a necessary gap or adds a unique perspective to the collective effort.
+
+\end{subsubs}
+
+\subsubsection{Value Addition}
+\begin{subsubs}
+
+Highlight any dependencies between your project and other components of the group project. Explain how collaboration and coordination with other group members are integral to achieving both individual and group objectives.
+
+\end{subsubs}
+
+\subsubsection{Interdependence}
+\begin{subsubs}
+
+Highlight any dependencies between your project and other components of the group project. Explain how collaboration and coordination with other group members are integral to achieving both individual and group objectives.
+
+\end{subsubs}
+
+\subsection{Statement of the Individual Project in Details}
+\subsubsection{Literature/Market Review and Problem Definition}
+\subsubsection{Objective and Scope of the Project}
+\subsubsection{Research Method and Justification}
+\subsubsection{Execution Plan}
+\subsubsection{Intended Outcomes}
+\begin{subsubs}
+
+Outcome 1: Description \& relation of this outcome to the group project. \\
+Outcome 2: Description \& relation of this outcome to the group project. \\
+Outcome 3: Description \& relation of this outcome to the group project.
+
+\end{subsubs}
+
+
+\subsection{Project Milestones}
+\begin{subs}
+    
+Table the group project and the individual project milestones. Illustrate the relation and alignment of milestones of the individual project and those of the group project.
+
+\end{subs}
+
+\subsection{Budget Plan}
+\subsubsection{Estimated Budge}
+\begin{subsubs}
+
+Text
+
+\end{subsubs}
+
+\subsubsection{Budget Breakdown}
+\begin{subsubs}
+
+Break down the budget into categories.
+
+\end{subsubs}
+
+\subsubsection{Cost-Effectiveness}
+\begin{subsubs}
+
+Discuss cost-effectiveness.
+
+\end{subsubs}
+
+\subsection{Risk Analysis and Mitigation}
+\subsubsection{Potential Risks or Challenges}
+\begin{subsubs}
+
+Identify potential risks or challenges that may arise during implementation of the project.
+
+\end{subsubs}
+
+\subsubsection{Impact of the Risks}
+\begin{subsubs}
+
+Assess the impact of the risks to the success of the project and propose mitigation strategies.
+    
+\end{subsubs}
+
+\newpage
+\bibliographystyle{IEEEtran}
+\bibliography{reference}
+\addcontentsline{toc}{section}{Reference}
+
+\end{document}
